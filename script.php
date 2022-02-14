@@ -35,7 +35,10 @@ foreach ($clients as $client){
     echo ' <td>'. $client['name'] . '</td>';
     $clientBudget = getBudget($date_from, $date_to);
     echo '<td>'. $clientBudget . '</td></tr>';
-    $allBudget += $clientBudget;
+    if (is_int($clientBudget)){
+        $allBudget += $clientBudget;
+    }
+
 }
 echo ' </table>';
 
@@ -61,7 +64,7 @@ echo 'Cумму по всем клиентам за период ----- <b>' .$al
             try {
                 $result = $api->lead->getAll($crm_user_id, $status, $id, $ifmodif, $count, $offset);
             } catch (Exception $e) {
-                return 0;
+                return 'invalid key';
             }
             array_push($leads, ...$result['result']);
             $offset = $count * $page;
