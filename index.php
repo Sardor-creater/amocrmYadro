@@ -11,7 +11,7 @@
 
 <form method="GET" action="script.php">
     <p>от</p>
-    <input type="number" name="date_from" placeholder="Нарпимер: 982173562"><br>
+    <input type="number" name="date_from" placeholder="Нарпимер: 1613372318"><br>
     <p>до</p>
     <input type="number" name="date_to" placeholder="Нарпимер: 1644861562"><br>
     <input type="submit" value="Отправить">

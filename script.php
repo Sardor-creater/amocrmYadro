@@ -51,7 +51,7 @@ echo 'Cумму по всем клиентам за период ----- <b>' .$al
         $crm_user_id = null; // int[] | фильтр по id ответственного
         $status = array(142); // int[] | фильтр по id статуса
         $id = null; // int[] | фильтр по id
-        $ifmodif = null; // string | фильтр по дате изменения. timestamp или строка в формате 'D, j M Y H:i:s'
+        $ifmodif = $date_from; // string | фильтр по дате изменения. timestamp или строка в формате 'D, j M Y H:i:s'
         $count = 25; // int | Количество запрашиваемых элементов
         $offset = 0; // int | смещение, относительно которого нужно вернуть элементы
         $leads = [];
